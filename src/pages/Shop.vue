@@ -3,7 +3,26 @@
     <section>
       <div class="container">
         <h1>Shop Page</h1>
+        <ShopItem v-for="product in shopList" :key="product.id"/>
       </div>
     </section>
   </div>
 </template>
+
+<script>
+import ShopItem from "@/components/ShopItem";
+export default {
+  name: "Shop",
+  components: { ShopItem },
+  data() {
+    return {
+      shopList: null,
+    };
+  },
+  created() {
+    // то, что получаем со store
+    this.shopList = this.$store.getters.getShopList;
+    console.log(this.shopList);
+  },
+};
+</script>
