@@ -34,6 +34,8 @@ export default {
   }
 }
 .item-img {
-  width: 300px;
+  display: block;
+  width: 250px;
+  margin-bottom: 20px;
 }
 </style>

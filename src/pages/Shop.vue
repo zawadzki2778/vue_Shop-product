@@ -28,10 +28,9 @@ export default {
   created() {
     // то, что получаем со store
     this.shopList = this.$store.getters.getShopList;
-    console.log(this.shopList);
   },
 };
 </script>
 
-<style lang="sass">
+<style lang="scss">
 </style>
